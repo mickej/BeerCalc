@@ -1,0 +1,23 @@
+{
+  "name": "IBU",
+  "version": "0.0.1",
+  "description": "IBU Calculator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mickej",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.12.0",
+    "bootstrap-stylus": "^0.2.1",
+    "express": "^4.12.2",
+    "forms": "^1.1.1",
+    "jade": "^1.9.2",
+    "math": "0.0.3",
+    "mathjs": "^1.4.0",
+    "morgan": "^1.5.1",
+    "nib": "^1.1.0",
+    "stylus": "^0.50.0"
+  }
+}
