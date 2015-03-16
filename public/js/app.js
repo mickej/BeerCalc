@@ -10,7 +10,8 @@ $(document).ready(function() {
 	}
 
 	var calcformKeyup = function(e) {
-		$.get("/calc", $("#calcform").serialize(), function(data) {
+		var form = $(this).closest("form");
+		$.get(form.attr("action"), form.serialize(), function(data) {
 			$("#title").html(data.total);
 			wrapper.find(".result").each( function(i) {
 				$(this).text(data.calcs[i]);
@@ -28,4 +29,5 @@ $(document).ready(function() {
 	$(".hop").on("click", ".remove_field", remove);
 
 	$("input[type=text]").on("keyup", calcformKeyup);
+	$('[data-toggle="tooltip"]').tooltip();
 });

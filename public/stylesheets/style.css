@@ -2926,16 +2926,18 @@ td {
 a img {
   border: none;
 }
-header {
-  padding: 20px 10px;
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#title {
   color: #000;
-  font-size: 25px;
   text-align: center;
-  background-color: #55acee;
-  border-bottom: 1px solid #157ece;
   text-shadow: 0px -1px 0px #157ece;
 }
+.navbar {
+  margin-bottom: 20px;
+}
 .container {
-  margin: 20px auto;
   overflow: hidden;
 }

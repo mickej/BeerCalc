@@ -31,11 +31,16 @@ function tinseth(og, boiltime, acid, grams, liters) {
   return utilization * aau
 }
 
+// Alcohol by volume
+function abv(og, sg) {
+  return (((og - sg) / 0.75) * 100).toFixed(2)
+}
+
 function asArray(val) {
   return Array.isArray(val) ? val : [val]
 }
 
-app.get('/calc', function (req, res) {
+app.get('/calcibu', function (req, res) {
   var volume = req.query.volume.length === 0 ? 0 : Number(req.query.volume)
   var og = req.query.og.length === 0 ? 0 : Number(req.query.og)
   var whops = req.query.weighthops.length === 0 ? [] : asArray(req.query.weighthops).map((v) => Number(v))
@@ -49,8 +54,21 @@ app.get('/calc', function (req, res) {
   })
 })
 
-app.get('/', function (req, res) {
-  res.render('index', {title : 'Home'})
+app.get('/calcabv', function (req, res) {
+  var og = req.query.og.length === 0 ? 0 : Number(req.query.og)
+  var sg = req.query.sg.length === 0 ? 0 : Number(req.query.sg)
+  res.json({
+    "total" : abv(og, sg) + "%"
+  })
 })
+
+app.get('/abv', function (req, res) {
+  res.render('abv', {title : 'ABV'})
+})
+
+app.get('/', function (req, res) {
+  res.render('ibu', {title : 'IBU'})
+})
+
 app.listen(3000)
 

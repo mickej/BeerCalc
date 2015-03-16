@@ -1,0 +1,28 @@
+doctype
+html
+  head
+    title #{title} - My Site
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css')
+    script(type='text/javascript' src='http://code.jquery.com/jquery.min.js')
+    script(type='text/javascript' src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js')
+    script(src='/js/app.js')
+  body
+    .container
+      nav(class='navbar navbar-default', role='navigation')
+        .container-fluid
+          .navbar-header
+            button(class='navbar-toggle collapsed', data-toggle='collapse', data-target='#navbar')
+              span.sronly
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a(class='navbar-brand', href='/#') IBU
+          #navbar(class='collapse navbar-collapse')
+            ul(class='nav navbar-nav')
+              li
+                a(href='/abv') ABV
+    .container
+      .jumbotron
+        h1#title 0.00
+      block content

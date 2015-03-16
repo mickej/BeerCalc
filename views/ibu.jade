@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  form.form-horizontal(name="calc" action="/calcibu", method="get", id="calcform", role="form")
+    div.form-group
+      label.control-label.col-sm-2(for="volume") Volume (Liters)
+      div.col-sm-10
+        input.form-control(type="text", name="volume", id="volume")
+    div.form-group
+      label.control-label.col-sm-2(for="og") Worth OG
+      div.col-sm-10
+        input.form-control(type="text", name="og", id="og")
+    div.form-group.input_fields_wrap
+      div.hop
+        div.col-sm-offset-2.col-sm-2
+          input.form-control(type="text", name="weighthops", id="weighthops" placeholder="Hops weight")
+        div.col-sm-2
+          input.form-control(type="text", name="acid", id="acid" placeholder="Alpha Acid (%)")
+        div.col-sm-2
+          input.form-control(type="text", name="boiltime", id="boiltime" placeholder="Boil time minutes")
+        div.col-sm-1
+          button.btn.btn-default.glyphicon.glyphicon-remove.remove_field
+        div.col-sm-3
+          p.lead.pull-right.result
+    div.form-group
+      div.col-sm-offset-2.col-sm-10
+        button.btn.btn-default.add_field_button() Add

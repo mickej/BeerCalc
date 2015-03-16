@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  form.form-horizontal(name="calc" action="/calcabv", method="get", id="calcform", role="form")
+    div.form-group
+      label.control-label.col-sm-2(for="og", data-toggle="tooltip", title="Original Gravity", data-placement="right") OG
+      div.col-sm-10
+        input.form-control(type="text", name="og", id="og", data-toggle="tooltip", title="Original Gravity", data-placement="top")
+    div.form-group
+      label.control-label.col-sm-2(for="sg", data-toggle="tooltip", title="Specific / Final Gravity", data-placement="right") SG / FG
+      div.col-sm-10
+        input.form-control(type="text", name="sg", id="sg", data-toggle="tooltip", title="Specific / Final Gravity", data-placement="top")
