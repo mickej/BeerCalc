@@ -1,0 +1,1 @@
+{"name":"BeerCalc","tagline":"Beer Calculators","body":"# Beer Calculator\r\n\r\nCollection of calculators for beer measurement\r\n\r\n**IBU** _International Bittering Units_   \r\nCalculator using Tinseth's algorithm\r\n\r\n**ABV** _Alcohol by Volume_  \r\nOG - FG / 0.75\r\n","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
